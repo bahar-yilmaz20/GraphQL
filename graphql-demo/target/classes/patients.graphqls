@@ -1,0 +1,23 @@
+type Patients {
+	idPatients: ID!,
+	name: String,
+	surname: String,
+	tcNo: String,
+	bloodType: String
+}
+
+input PatientsDto{
+	name: String,
+	surname: String,
+	tcNo: String,
+	bloodType: String
+}
+
+type Query {
+	getPatients(idPatients: ID):[Patients]
+	getById:[Patients]
+}
+
+type Mutation {
+	createPatients(patients:PatientsDto):Patients
+}
