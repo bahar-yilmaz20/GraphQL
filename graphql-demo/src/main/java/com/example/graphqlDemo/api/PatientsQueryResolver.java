@@ -19,7 +19,7 @@ public class PatientsQueryResolver implements GraphQLQueryResolver  {
 	@Autowired
 	private PatientRepository patientsRepository;
 	
-	public List<Patients> getPatients(Long idPatients){
+	public Patients getPatients(Long idPatients){
 		return patientsRepository.getByIdPatients(idPatients);
 	}
 	

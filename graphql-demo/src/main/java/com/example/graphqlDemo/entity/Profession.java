@@ -14,11 +14,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+
 public class Profession {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long idProfession;
-	public String nameOfProffesion;
+	public String nameOfProfession;
 	
 }

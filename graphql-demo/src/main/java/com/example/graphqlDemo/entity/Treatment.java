@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -21,8 +22,11 @@ public class Treatment implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long idTreatment;
-	public int idDoctors;
-	public int idPatients;
+	
+	@OneToOne
+	public Doctors doctor;
+	@OneToOne
+	public Patients patient;	
 	public String disease;
 	public String description;
 	public String medicine;

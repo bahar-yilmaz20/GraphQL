@@ -9,7 +9,7 @@ import com.example.graphqlDemo.entity.Patients;
 
 public interface PatientRepository extends JpaRepository<Patients,Long>{
 
-	List<Patients> getByIdPatients(Long idPatients);
+	Patients getByIdPatients(Long idPatients);
 
 
 }
